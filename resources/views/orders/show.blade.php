@@ -10,8 +10,13 @@
         <div class="card bg-base-100 shadow-md">
             <div class="lg:flex ">
                 <div class="lg:w-1/3 p-4">
-                    <img src="{{ $order->event?->gambar ? asset($order->event->gambar) : 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp' }}"
-                        alt="{{ $order->event?->judul ?? 'Event' }}" class="w-full object-cover mb-2" />
+                    <img src="{{ $order->event?->gambar
+        ? (filter_var($order->event->gambar, FILTER_VALIDATE_URL)
+            ? $order->event->gambar
+            : asset('images/events/' . $order->event->gambar))
+        : asset('assets/images/placeholder.jpg')
+    }}" alt="{{ $order->event?->judul ?? 'Event' }}" class="w-full object-cover mb-2" />
+
                     <h2 class="font-semibold text-lg">{{ $order->event?->judul ?? 'Event' }}</h2>
                     <p class="text-sm text-gray-500 mt-1">{{ $order->event?->lokasi ?? '' }}</p>
                 </div>
