@@ -2,9 +2,9 @@
     <div class="hero bg-blue-900 min-h-screen">
         <div class="hero-content text-center text-white">
             <div class="max-w-4xl">
-                <h1 class="text-5xl font-bold">Hi, Amankan Tiketmu yuk.</h1>
+                <h1 class="text-5xl font-bold">Your Ticket, Your Moment.</h1>
                 <p class="py-6">
-                    BengTix: Beli tiket, auto asik.
+                    ElTix: Beli tiket, auto asik.
                 </p>
             </div>
         </div>

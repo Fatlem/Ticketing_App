@@ -1,0 +1,14 @@
+1. buka repository GitHub di browser, copy url repository
+2. buat folder baru di komputer, buka di vs code
+3. buka terminal, jalankan perintah : git clone (url repository), tunggu sampai selesai
+4. masuk ke direktori project, menu file-open folder, pilih folder project
+5. buka terminal, jalankan perintah : composer install, tunggu sampai selesai
+6. buka terminal, jalankan perintah : npm install, tunggu sampai selesai
+7. rename file .env.example menjadi .env, atur konfigurasi database (biasanya di baris 23)
+
+8. buka terminal, jalankan perintah : php artisan key:generate
+9. buka terminal, jalankan perintah : php artisan migrate
+10. buka terminal, jalankan perintah : php artisan db:seed
+11. buka terminal baru, jalankan perintah : php artisan serve
+12. buka terminal baru, jalankan perintah : npm run dev
+

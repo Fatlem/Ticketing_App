@@ -57,6 +57,20 @@
                 </a>
             </li>
 
+            <!-- Lokasi -->
+            <li class="relative group">
+                <a href="{{ route('admin.lokasi.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right {{ request()->routeIs('admin.lokasi.*') ? 'bg-gradient-to-r from-yellow-600 to-yellow-700 text-white shadow-lg shadow-yellow-500/50' : 'text-gray-300 hover:bg-gray-700/50' }} rounded-xl transition-all duration-300" data-tip="Lokasi">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="is-drawer-close:hidden font-medium">Lokasi</span>
+                    @if(request()->routeIs('admin.lokasi.*'))
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-white rounded-r-full is-drawer-close:hidden"></div>
+                    @endif
+                </a>
+            </li>
+
             <!-- Event item -->
             <li class="relative group">
                 <a href="{{ route('admin.events.index') }}"
